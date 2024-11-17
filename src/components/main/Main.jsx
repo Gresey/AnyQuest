@@ -1,6 +1,9 @@
 import React, { useContext } from 'react'
 import './Main.css';
-import { Context } from '../../context/context';
+import { Context } from '../../context/context.jsx';
+import User from '../../assets/user.png';
+import Send from '../../assets/send.png';
+
 const Main = () => {
 
   const {onSent,recentPrompt,showResult,loading,resultData,setInput,input}=useContext(Context);
@@ -10,7 +13,7 @@ const Main = () => {
       <div className='nav'>
         <p>AnyQuest</p>
         <div className='user-img'>
-          <img src='./src/assets/user.png' />
+          <img src={User} />
 
         </div>
 
@@ -69,9 +72,8 @@ const Main = () => {
              value={input} type='text' placeholder='Enter Promt here'></input>
             <div>
 
-              <img src="./src/assets/gallery.png" alt="" />
-              <img src="./src/assets/mic.png" alt="" />
-             {input?  <img src="./src/assets/send.png" alt=""  onClick={()=>onSent()}/>
+              
+             {input?  <img src={Send} alt=""  onClick={()=>onSent()}/>
           :null}
               </div>
           </div>

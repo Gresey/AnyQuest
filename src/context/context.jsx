@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import run from "../config/AnyQuest";
+import run from "../config/gemini.js";
 
 export const Context=createContext();
 
